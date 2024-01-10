@@ -1,0 +1,25 @@
+/* Enter your custom styles here */
+
+.customBadge {
+    color: #ffffff; 
+    background-color: #0F828F; 
+    padding: 1px 4px 1px 4px; 
+    border-radius: 4px;
+    font: 72;
+    font-weight: 700;
+    size: 12px;
+    width: 120px;
+}
+
+
+.customToolbar {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 3px;
+}
+
+.customTable {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
