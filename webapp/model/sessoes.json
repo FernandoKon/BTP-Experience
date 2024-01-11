@@ -1,5 +1,95 @@
 {
     "ID": "12345678",
+    "Average": "5",
     "Time": "11/11/2024 - 9h30",
-    "Responsible":
+    "Responsible": "SAP Brasil",
+    "Type": "Onboarding",
+    "Description": "O onboarding é apenas o ponto de partida para descobrir os detalhes do evento, conectar às inovações mais recentes e ficar à frente das tendências.",
+    "Room": "200001353",
+    "Sector": "Rosa",
+    "Participants": [
+        {
+            "Name" : "Leandro Dante",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 13h30 "
+        },
+        {
+            "Name" : "João Neri",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 14h30 "
+        },
+        {
+            "Name" : "Debora Lobão",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 12h30 "
+        },
+        {
+            "Name" : "Gabriel Lopes",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 11h30 "
+        },
+        {
+            "Name" : "Serj Leonel",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 15h30 "
+        },
+        {
+            "Name" : "Fernando",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 16h30 "
+        },
+        {
+            "Name" : "Raquel",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 13h30 "
+        },
+        {
+            "Name" : "Guilherme",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 13h30 "
+        },
+        {
+            "Name" : "Renan",
+            "Enterprise" : "Lab2dev",
+            "DateTime" : "11/11/2024 - 13h30 "
+        }
+    ],
+    "Assessments": [
+        {
+            "ID": "200001353",
+            "Name": "Debora Freitas Lobão",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 5
+        },
+        {
+            "ID": "200001354",
+            "Name": "Leandro Dante",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 5
+        },
+        {
+            "ID": "200001355",
+            "Name": "João Neri",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 4
+        },
+        {
+            "ID": "200001356",
+            "Name": "Gabriel Lopes",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 4.5
+        },
+        {
+            "ID": "200001357",
+            "Name": "Carlos Eduardo",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 3
+        },
+        {
+            "ID": "200001358",
+            "Name": "Serj Leonel",
+            "Feedback": "A paletras sobre SAP BTP foi extremamente esclarecedora e bem estruturada. O palestrante demonstrou um profundo conhecimento sobre todos os temas abordados duranmte a palestra. Parabéns a todos os envolvidos!",
+            "Assessment": 2.5
+        }
+    ]
 }

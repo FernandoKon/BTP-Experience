@@ -21,7 +21,7 @@
 				<OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true"/>
 			</layoutData>
             <items>
-                <IconTabFilter key="Informacoes" text="Informações"/>
+                <IconTabFilter key="Informacoes" text="Informações" />
                 <IconTabFilter key="Tarefas" text="Tarefas"/>
                 <IconTabFilter key="Trilhas" text="Trilhas"/>
             </items>

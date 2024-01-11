@@ -14,10 +14,6 @@ sap.ui.define([],
                     return "4º - Quarto";
                 } else if (sFloor == 5) {
                     return "5º - Quinto";
-                } else if (sFloor == 5) {
-                    return "6º - Sexto";
-                } else if (sFloor == 5) {
-                    return "7º - Sétimo";
                 }
             }
         }

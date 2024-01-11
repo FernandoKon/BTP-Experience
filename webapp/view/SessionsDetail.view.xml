@@ -23,13 +23,13 @@
                                 <form:content>
                                     <Title text="OnBoarding - SAP BTP Experience 2024" class="textBold"/>
                                     <main:Badge text="CONCLUÍDO" colorScheme="10" class="customBadge"/>
-                                    <RatingIndicator maxValue="5" value="5" tooltip="Rating Tooltip" />
+                                    <RatingIndicator maxValue="5" value="{sessoes>/Average}" tooltip="Rating Tooltip" />
                                     <Label text="ID" wrapping="true" />
-                                    <ObjectAttribute text="12345678" class="sapUiTinyMarginBottom"/>
+                                    <ObjectAttribute text="{sessoes>/ID}" class="sapUiTinyMarginBottom"/>
                                     <Label text="Data e hora" wrapping="true" />
-                                    <ObjectAttribute text="11/11/2024 - 9h30"  class="sapUiTinyMarginBottom"/>
+                                    <ObjectAttribute text="{sessoes>/Time}"  class="sapUiTinyMarginBottom"/>
                                     <Label text="Responsável" wrapping="true" />
-                                    <ObjectAttribute text="SAP Brasil"/>
+                                    <ObjectAttribute text="{sessoes>/Responsible}"/>
                                 </form:content>
                             </form:SimpleForm>
                         </VBox>
@@ -38,9 +38,9 @@
                                 <form:content>
                                     <Title text="Sobre o evento" titleStyle="H6" class="sapUiTinyMarginBottom"/>
                                     <Label text="Tipo do Evento" wrapping="true" />
-                                    <ObjectAttribute text="Onboarding" />
+                                    <ObjectAttribute text="{sessoes>/Type}" />
                                     <Label text="Descrição" wrapping="true" />
-                                    <ObjectAttribute text="O onboarding é apenas o ponto de partida para descobrir os detalhes do evento, conectar às inovações mais recentes e ficar à frente das tendências."/>
+                                    <ObjectAttribute text="{sessoes>/Description}"/>
                                 </form:content>
                             </form:SimpleForm>
                         </VBox>
@@ -49,9 +49,9 @@
                                 <form:content>
                                     <Title text="Localização" titleStyle="H6" class="sapUiTinyMarginBottom"/>
                                     <Label text="Sala" wrapping="true" />
-                                    <ObjectAttribute text="200001353" />
+                                    <ObjectAttribute text="{sessoes>/Room}" />
                                     <Label text="Setor" wrapping="true" />
-                                    <ObjectAttribute text="Rosa"/>
+                                    <ObjectAttribute text="{sessoes>/Sector}"/>
                                 </form:content>
                             </form:SimpleForm>
                         </VBox>
@@ -85,13 +85,13 @@
             enableSelectAll="false"
             enableCustomFilter="true"
             visibleRowCount="5"
-            rows="{participantes>/}">
+            rows="{sessoes>/Participants}">
                 <t:extension>
 					<Panel class="customToolbar">
                         <Toolbar style="Clear">
                             <Title text="Participantes"/>
                             <ToolbarSpacer/>
-                            <SearchField placeholder="Pesquisar" liveChange="onSearch" width="15rem"/>
+                            <SearchField placeholder="Pesquisar" liveChange="onSearchParticipants" width="15rem"/>
                         </Toolbar>
                     </Panel>
 				</t:extension>
@@ -100,19 +100,19 @@
                     <t:Column>
                         <Title text="Nome Completo" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{participantes>Name}" />
+                        <Text text="{sessoes>Name}" />
                         </t:template>
                     </t:Column>
                     <t:Column>
                         <Title text="Empresa" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{participantes>Enterprise}" />
+                        <Text text="{sessoes>Enterprise}" />
                         </t:template>
                     </t:Column>
                     <t:Column>
                         <Title text="Data/Hora do checkin" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{people>Name}" />
+                        <Text text="{sessoes>DateTime}" />
                         </t:template>
                     </t:Column>
                     <t:Column width="3%" hAlign="Center">
@@ -135,40 +135,40 @@
             enableSelectAll="false"
             enableCustomFilter="true"
             visibleRowCount="5"
-            rows="{participantes>/}">
+            rows="{sessoes>/Assessments}">
                 <t:extension>
 					<Panel class="customToolbar">
                         <Toolbar style="Clear">
                             <Title text="Avaliações"/>
                             <ToolbarSpacer/>
-                            <SearchField placeholder="Pesquisar" liveChange="onSearch" width="15rem"/>
+                            <SearchField placeholder="Pesquisar" liveChange="onSearchAssessments" width="15rem"/>
                         </Toolbar>
                     </Panel>
 				</t:extension>
 
                 <t:columns>
-                    <t:Column>
+                    <t:Column width="90px">
                         <Title text="ID" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{participantes>Name}" />
+                        <Text text="{sessoes>ID}" />
                         </t:template>
                     </t:Column>
-                    <t:Column>
+                    <t:Column width="180px">
                         <Title text="Avaliador" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{participantes>Name}" />
+                        <Text text="{sessoes>Name}" />
                         </t:template>
                     </t:Column>
                     <t:Column>
                         <Title text="Feedback" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{people>Name}" />
+                        <Text text="{sessoes>Feedback}" />
                         </t:template>
                     </t:Column>
-                    <t:Column>
+                    <t:Column width="90px">
                         <Title text="Avaliação por estrela" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{people>Name}" />
+                            <RatingIndicator maxValue="5" value="{sessoes>Assessment}" tooltip="Rating Tooltip" />
                         </t:template>
                     </t:Column>
                     <t:Column width="3%" hAlign="Center">
