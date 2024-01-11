@@ -134,10 +134,10 @@
           ]
         },
         {
-          "name": "SectionsDetail",
-          "pattern": "SectionsDetail",
+          "name": "SessionsDetail",
+          "pattern": "SessionsDetail",
           "target": [
-            "TargetSectionsDetail"
+            "TargetSessionsDetail"
           ]
         }
       ],
@@ -163,12 +163,12 @@
           "viewId": "Rooms",
           "viewName": "Rooms"
         },
-        "TargetSectionsDetail": {
+        "TargetSessionsDetail": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "SectionsDetail",
-          "viewName": "SectionsDetail"
+          "viewId": "SessionsDetail",
+          "viewName": "SessionsDetail"
         }
       }
     },

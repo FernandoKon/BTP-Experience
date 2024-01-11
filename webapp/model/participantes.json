@@ -23,6 +23,26 @@
         "Name" : "Serj Leonel",
         "Enterprise" : "Lab2dev",
         "Capacity" : "50 "
+    },
+    {
+        "Name" : "Fernando",
+        "Enterprise" : "Lab2dev",
+        "Capacity" : "50 "
+    },
+    {
+        "Name" : "Raquel",
+        "Enterprise" : "Lab2dev",
+        "Capacity" : "50 "
+    },
+    {
+        "Name" : "Guilherme",
+        "Enterprise" : "Lab2dev",
+        "Capacity" : "50 "
+    },
+    {
+        "Name" : "Renan",
+        "Enterprise" : "Lab2dev",
+        "Capacity" : "50 "
     }
     
 ]

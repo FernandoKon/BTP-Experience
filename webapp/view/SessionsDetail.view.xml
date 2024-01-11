@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.lab2dev.btpexperience.controller.SectionsDetail"
+<mvc:View controllerName="com.lab2dev.btpexperience.controller.SessionsDetail"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:form="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
@@ -6,7 +6,7 @@
     xmlns:l="sap.ui.layout"
     xmlns:t="sap.ui.table"
     xmlns="sap.m">
-    <Page id="SectionsDetail" title="{i18n>title}" showHeader="false">
+    <Page id="SessionsDetail" title="{i18n>title}" showHeader="false">
         <HeaderContainer class="sapUiMediumMarginBegin sapUiResponsivePadding sapUiContentPadding">
             <VBox>
                 <Title text="Sessões " class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
@@ -77,20 +77,21 @@
 
         <Panel width="auto" backgroundDesign="Transparent" class="sapUiResponsiveContentPadding sapUiResponsivePadding sapUiTinyMarginBeginEnd">
             <t:Table
-            id="tableParticipant"
+            id="idTableParticipant"
             width="auto"
             class="sapUiNoContentPadding"
             selectionMode="None"
             enableColumnReordering="false"
             enableSelectAll="false"
             enableCustomFilter="true"
+            visibleRowCount="5"
             rows="{participantes>/}">
                 <t:extension>
 					<Panel class="customToolbar">
                         <Toolbar style="Clear">
                             <Title text="Participantes"/>
                             <ToolbarSpacer/>
-                            <SearchField placeholder="Pesquisar" liveChange="" width="15rem"/>
+                            <SearchField placeholder="Pesquisar" liveChange="onSearch" width="15rem"/>
                         </Toolbar>
                     </Panel>
 				</t:extension>
@@ -118,6 +119,62 @@
                         <Label text="" />
                         <t:template>
                         <core:Icon src="sap-icon://detail-view" />
+                        </t:template>
+                    </t:Column>
+                </t:columns>
+            </t:Table>
+        </Panel>
+
+        <Panel width="auto" backgroundDesign="Transparent" class="sapUiResponsiveContentPadding sapUiResponsivePadding sapUiTinyMarginBeginEnd">
+            <t:Table
+            id="idTableAssessments"
+            width="auto"
+            class="sapUiNoContentPadding"
+            selectionMode="None"
+            enableColumnReordering="false"
+            enableSelectAll="false"
+            enableCustomFilter="true"
+            visibleRowCount="5"
+            rows="{participantes>/}">
+                <t:extension>
+					<Panel class="customToolbar">
+                        <Toolbar style="Clear">
+                            <Title text="Avaliações"/>
+                            <ToolbarSpacer/>
+                            <SearchField placeholder="Pesquisar" liveChange="onSearch" width="15rem"/>
+                        </Toolbar>
+                    </Panel>
+				</t:extension>
+
+                <t:columns>
+                    <t:Column>
+                        <Title text="ID" titleStyle="H6"/>
+                        <t:template>
+                        <Text text="{participantes>Name}" />
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Title text="Avaliador" titleStyle="H6"/>
+                        <t:template>
+                        <Text text="{participantes>Name}" />
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Title text="Feedback" titleStyle="H6"/>
+                        <t:template>
+                        <Text text="{people>Name}" />
+                        </t:template>
+                    </t:Column>
+                    <t:Column>
+                        <Title text="Avaliação por estrela" titleStyle="H6"/>
+                        <t:template>
+                        <Text text="{people>Name}" />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="3%" hAlign="Center">
+                        <Label text="" />
+                        <t:template>
+                        <core:Icon src="sap-icon://show" />
                         </t:template>
                     </t:Column>
                 </t:columns>
