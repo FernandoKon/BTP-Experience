@@ -57,5 +57,6 @@ sap.ui.define([
                 const oBinding = oGridList.getBinding("rows");
                 oBinding.filter(aFilters);
             },
+
         });
     });

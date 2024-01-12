@@ -23,7 +23,7 @@
                                 <form:content>
                                     <Title text="OnBoarding - SAP BTP Experience 2024" class="textBold"/>
                                     <main:Badge text="CONCLUÍDO" colorScheme="10" class="customBadge"/>
-                                    <RatingIndicator maxValue="5" value="{sessoes>/Average}" tooltip="Rating Tooltip" />
+                                    <RatingIndicator maxValue="5" value="{sessoes>/Average}" tooltip="Rating Tooltip" editable="false"/>
                                     <Label text="ID" wrapping="true" />
                                     <ObjectAttribute text="{sessoes>/ID}" class="sapUiTinyMarginBottom"/>
                                     <Label text="Data e hora" wrapping="true" />
@@ -97,28 +97,28 @@
 				</t:extension>
 
                 <t:columns>
-                    <t:Column>
+                    <t:Column resizable="false" >
                         <Title text="Nome Completo" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>Name}" />
+                            <Text text="{sessoes>Name}" />
                         </t:template>
                     </t:Column>
-                    <t:Column>
+                    <t:Column resizable="false">
                         <Title text="Empresa" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>Enterprise}" />
+                            <Text text="{sessoes>Enterprise}" />
                         </t:template>
                     </t:Column>
-                    <t:Column>
+                    <t:Column resizable="false">
                         <Title text="Data/Hora do checkin" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>DateTime}" />
+                            <Text text="{sessoes>DateTime}" />
                         </t:template>
                     </t:Column>
-                    <t:Column width="3%" hAlign="Center">
+                    <t:Column width="3%" hAlign="Center" resizable="false">
                         <Label text="" />
                         <t:template>
-                        <core:Icon src="sap-icon://detail-view" />
+                            <core:Icon src="sap-icon://detail-view" press=""/>
                         </t:template>
                     </t:Column>
                 </t:columns>
@@ -147,39 +147,39 @@
 				</t:extension>
 
                 <t:columns>
-                    <t:Column width="90px">
+                    <t:Column width="90px" resizable="false">
                         <Title text="ID" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>ID}" />
+                            <Text text="{sessoes>ID}" />
                         </t:template>
                     </t:Column>
-                    <t:Column width="180px">
+                    <t:Column width="180px" resizable="false">
                         <Title text="Avaliador" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>Name}" />
+                            <Text text="{sessoes>Name}" />
                         </t:template>
                     </t:Column>
-                    <t:Column>
+                    <t:Column resizable="false">
                         <Title text="Feedback" titleStyle="H6"/>
                         <t:template>
-                        <Text text="{sessoes>Feedback}" />
+                            <Text text="{sessoes>Feedback}" wrapping="false" />
                         </t:template>
                     </t:Column>
-                    <t:Column width="90px">
-                        <Title text="Avaliação por estrela" titleStyle="H6"/>
+                    <t:Column width="165px" resizable="false" hAlign="Center">
+                        <Title text="Avaliação por estrelas" titleStyle="H6"/>
                         <t:template>
-                            <RatingIndicator maxValue="5" value="{sessoes>Assessment}" tooltip="Rating Tooltip" />
+                            <RatingIndicator maxValue="5" value="{sessoes>Assessment}" tooltip="Rating Tooltip" editable="false" />
                         </t:template>
                     </t:Column>
-                    <t:Column width="3%" hAlign="Center">
+                    <t:Column width="3%" hAlign="Center" resizable="false">
                         <Label text="" />
                         <t:template>
-                        <core:Icon src="sap-icon://show" />
+                         <core:Icon src="sap-icon://show" press=""/>
                         </t:template>
                     </t:Column>
                 </t:columns>
             </t:Table>
         </Panel>
-        
+
     </Page>
 </mvc:View>
